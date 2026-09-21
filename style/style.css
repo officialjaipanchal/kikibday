@@ -212,7 +212,7 @@ body {
   position: absolute;
   width: 90px;
   top: -100px;
-  right: -4px;
+  right: -1px;
   z-index: 5;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
   transform: rotate(18deg);
@@ -401,4 +401,231 @@ body {
     width: 190px;
     max-height: 25vh;
   }
+}
+
+/* Countdown Screen Styles */
+.countdown-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #fff0f5 0%, #e6f0ff 50%, #f9f0ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.countdown-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.countdown-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 105, 180, 0.3);
+  border-radius: 24px;
+  padding: 35px 25px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 0 30px rgba(255, 105, 180, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.sparkles {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.countdown-title {
+  font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+  color: #ff4081;
+  margin: 5px 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.countdown-subtitle {
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  color: #555;
+  margin: 0 0 22px;
+  font-weight: 300;
+}
+
+.timer-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 22px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.timer-box {
+  flex: 1;
+  background: linear-gradient(145deg, #ffffff, #f4f7ff);
+  border: 2px solid rgba(21, 161, 237, 0.25);
+  border-radius: 16px;
+  padding: 12px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.timer-num {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: #15a1ed;
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.1;
+}
+
+.timer-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #777;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.good-things-box {
+  background: rgba(255, 240, 245, 0.8);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 105, 180, 0.15);
+}
+
+.good-thing {
+  margin: 0;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  color: #d81b60;
+  font-style: italic;
+  font-weight: 400;
+  transition: opacity 0.5s ease;
+  line-height: 1.4;
+}
+
+.preview-btn {
+  background: transparent;
+  border: 1.5px dashed #15a1ed;
+  color: #15a1ed;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.preview-btn:hover {
+  background: #15a1ed;
+  color: #ffffff;
+  border-style: solid;
+  transform: translateY(-1px);
+}
+
+/* Teasing Modal Styles */
+.kiki-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.kiki-modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.kiki-modal-content {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 30px 25px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 25px rgba(255, 64, 129, 0.3);
+  border: 3px solid #ff4081;
+  animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.kiki-emoji {
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+}
+
+.kiki-modal-content h2 {
+  font-size: 1.6rem;
+  color: #ff4081;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.kiki-modal-content p {
+  font-size: 1.15rem;
+  color: #444;
+  margin: 0 0 22px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.kiki-btn {
+  background: linear-gradient(135deg, #ff4081 0%, #d81b60 100%);
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 64, 129, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kiki-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 64, 129, 0.45);
 }

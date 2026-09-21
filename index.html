@@ -13,6 +13,50 @@
 </head>
 
 <body>
+  <!-- Countdown Screen until 25 Sept 12:00 AM -->
+  <div id="countdown-screen" class="countdown-container">
+    <div class="countdown-card">
+      <div class="sparkles">✨ 🎈 🎁</div>
+      <h1 class="countdown-title">Something Special is Cooking...</h1>
+      <p class="countdown-subtitle">Counting down to Krishna's Birthday! 🎂</p>
+      
+      <div class="timer-grid">
+        <div class="timer-box">
+          <span id="days" class="timer-num">00</span>
+          <span class="timer-label">Days</span>
+        </div>
+        <div class="timer-box">
+          <span id="hours" class="timer-num">00</span>
+          <span class="timer-label">Hours</span>
+        </div>
+        <div class="timer-box">
+          <span id="minutes" class="timer-num">00</span>
+          <span class="timer-label">Minutes</span>
+        </div>
+        <div class="timer-box">
+          <span id="seconds" class="timer-num">00</span>
+          <span class="timer-label">Seconds</span>
+        </div>
+      </div>
+
+      <div class="good-things-box">
+        <p id="good-thing-text" class="good-thing">✨ "The universe is preparing a magical day for you!"</p>
+      </div>
+
+      <button id="preview-btn" class="preview-btn">✨ Click to Preview Surprise</button>
+    </div>
+  </div>
+
+  <!-- Teasing Modal when Preview is clicked -->
+  <div id="kiki-modal" class="kiki-modal hidden">
+    <div class="kiki-modal-content">
+      <div class="kiki-emoji">😜🎁✨</div>
+      <h2>Nice Try!</h2>
+      <p>Kikiiiii, wait till the day comes! 🤫🎂</p>
+      <button id="close-kiki-modal" class="kiki-btn">Okay fine! 🙈</button>
+    </div>
+  </div>
+
   <div class="container">
     <div class="one">
       <h1 class="one">
