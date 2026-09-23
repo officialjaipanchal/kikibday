@@ -1,53 +1,167 @@
 {
   "greeting": "Hey",
-  "name": "Krishna ✨",
-  "greetingText": "I really like your name btw!",
-  "wishText": "May this new year of your life bring you beautiful moments, unforgettable memories, and endless reasons to smile. Happy Birthday! ❤️✨",
+  "name": "Krishna (Kikiiii) ✨",
+  "greetingText": "I absolutely adore you and your sweet smile! 🥰",
+  "wishText": "May your day be filled with endless smiles, pure magic, warm hugs, and all the love in the universe. You bring so much joy and light into my life every single day! Happy Birthday, beautiful! ❤️✨🎉",
   "imagePath": "img/kiki.png",
   "image2Path": "img/Bday K.png",
-  "text1": "It's your birthday!!! 😀",
-  "textInChatBox": "Happy birthday to you!! Yeee! Many many happy blah...",
-  "sendButtonLabel": "Send",
-  "text2": "That's what I was going to do.",
-  "text3": "But then I stopped.",
-  "text4": "I realised, I wanted to do something",
-  "text4Adjective": "special",
-  "text5Entry": "Because,",
-  "text5Content": "You are Special",
-  "smiley": "😁",
+  "text1": "It's your special birthday, my favorite human! 🎂💖",
+  "textInChatBox": "Happy Birthday to the most amazing, gorgeous & adorable girl ever!! 🥳💕✨",
+  "sendButtonLabel": "Send 💌",
+  "text2": "That was going to be a basic wish...",
+  "text3": "But then I stopped and smiled.",
+  "text4": "Because a basic wish is never enough for someone as",
+  "text4Adjective": "extraordinary",
+  "text5Entry": "as you,",
+  "text5Content": "You are Truly Special",
+  "smiley": "🥰💖",
   "bigTextPart1": "S",
   "bigTextPart2": "O",
-  "wishHeading": "Happy Birthday!",
-  "outroText": "Okay, now come back and tell me if you liked it.",
-  "replayText": "Or click, if you want to watch it again.",
-  "outroSmiley": "😊",
+  "wishHeading": "Happy Birthday, Kiki! 🎂✨",
+  "outroText": "Now come back, give me a big smile, and tell me if it made your heart skip a beat! 😉💖",
+  "replayText": "Or click here if you want to relive the magic again! ✨🎈",
+  "outroSmiley": "🥰✨",
   "targetDate": "2026-09-25T00:00:00",
+  "revealTitle": "It's Your Day, Kiki! 🎂",
+  "revealSubtitle": "The wait is finally over 🎉",
+  "revealButton": "Open your surprise 🎁",
+  "loveLetterTitle": "A Secret Birthday Note For You 💌✨",
+  "loveLetterBody": "Kiki,\n\nOkay, I wrote and deleted this about five times, so just read it and don't judge me 😅\n\nHappy birthday ❤️ I don't really say this stuff out loud, so I'm putting it here where you can't interrupt me or laugh at me.\n\nYou have this laugh and voice that somehow make it impossible to stay annoyed at you, even when I'm trying really hard to. And somehow, you're always the first person I want to tell things to, whether they're important, completely stupid, or somewhere in between.\n\nI still love those simple moments with you, like going to Palladium Mall just for tea. I don't know why, but those little moments always end up being my favorite memories.\n\nThanks for putting up with my habit of arguing even when I know you're right 😂, and for all those little things you do, like asking me if I reached home, remembering my little preferences, and remembering the random things I tell you. You probably don't even notice you do it, but I do.\n\nI hope this year is really kind to you. You deserve all the happiness. ❤️\n\nNow go eat cake. And yes, I'm expecting my share 🎂\n\nHappy birthday, Kiki. ❤️\n\nYours - Jerry ;)",
+  "musicUrl": "music/happy-birthday.mp3",
+  "polaroidCaption1": "Your cute smile 🥰",
+  "polaroidCaption2": "Birthday Queen 👑",
   "teaserResponses": [
     {
-      "emoji": "🔐✨",
-      "title": "Nice Try, Krishna!",
-      "message": "The Birthday Vault is locked with 256-bit celebration encryption. You'll have to wait till midnight! 🤫"
+      "emoji": "🙅‍♂️🔒",
+      "title": "Access Denied, Madam",
+      "message": "This vault only opens at midnight. Not 11:59. Not \"just one small peek\". Midnight. 🕛",
+      "button": "Fine, I'll wait 🙄"
     },
     {
-      "emoji": "🕵️‍♀️🎁",
-      "title": "Caught Red-Handed!",
-      "message": "Attempt #2 detected! 99% of secrets are still top secret... but your curiosity score is 100/100! 📈"
+      "emoji": "🕵️‍♀️📋",
+      "title": "Suspicious Activity Detected",
+      "message": "Second attempt logged. I've added it to your file, right next to \"eats fries without sharing\". 🍟",
+      "button": "It wasn't me 🙈"
     },
     {
-      "emoji": "✨💖",
-      "title": "Patience, Birthday Queen!",
-      "message": "Great things take time. Here is an exclusive mini hint: Scratch the card below to reveal a silly clue! 👇"
+      "emoji": "😤☕",
+      "title": "Okay Fine, One Clue",
+      "message": "Scratch the card below. And no, you can't argue your way into a better hint. Arguing is my job. 😂👇",
+      "button": "Hmph. Okay 😤"
     },
     {
-      "emoji": "🎉🎂",
-      "title": "You REALLY want a sneak peek?",
-      "message": "Okay okay! 1 real hint: Legend says someone spent way too much time making this just to make you smile! 🤭✨"
+      "emoji": "🥺🎁",
+      "title": "Kikiii, Stop It",
+      "message": "Real hint this time: keep your volume UP at midnight. And keep some snacks nearby. You'll know why. 🔊",
+      "button": "Snacks ready 🍿"
     },
     {
-      "emoji": "🥳🎈",
-      "title": "Curiosity Overload!",
-      "message": "You've unlocked maximum sneak-peek attempts! Tap the floating gifts & balloons on screen to burst confetti! 🎈✨"
+      "emoji": "🏳️😂",
+      "title": "I Give Up, You Win",
+      "message": "You've tried so many times I'm actually impressed. Still not telling. Go pop the floating balloons and burn off some curiosity. 🎈",
+      "button": "You're so annoying 😂"
     }
   ],
-  "scratchCardHint": "😜 Hint: 100% chance of cheesy birthday wishes, floating balloons & maximum silly drama!"
+  "scratchCardHints": [
+    "🔍 Hint: there's evidence. A LOT of evidence. Mostly of you eating. 📸🍕",
+    "💌 Hint: someone actually wrote you something. Himself. No copy-paste. Mostly.",
+    "🍌 Hint: a certain pair of yellow t-shirts is making a comeback.",
+    "🔊 Hint: volume UP at midnight. There's a song, and no, I'm not singing it.",
+    "🎈 Hint: balloons. Big ones. Some of them are heart-shaped. That's all you get."
+  ],
+  "photoWall": {
+    "title": "The Evidence Wall 🕵️‍♀️📸",
+    "subtitle": "12 exhibits of pure silliness (and a LOT of food). Tap a photo to flip it 👆",
+    "photos": [
+      {
+        "src": "img/wall/1.jpg",
+        "caption": "Minion squad, reporting for duty 🍌",
+        "quote": "We walked in as humans and walked out as minions. Matching tees, zero shame. Bello! 🍌💛",
+        "focus": "38%",
+        "label": "Exhibit A"
+      },
+      {
+        "src": "img/wall/6.jpg",
+        "caption": "Tea for everyone. Mostly for her ☕",
+        "quote": "Chai in one hand, phone in the other, smile on full power. Peak Kiki mode unlocked. 📱☕",
+        "focus": "28%",
+        "label": "Exhibit B"
+      },
+      {
+        "src": "img/wall/7.jpg",
+        "caption": "Pizza's here. Her attention isn't 🍕",
+        "quote": "A whole Margherita right in front of her and she's staring somewhere else like she's plotting an escape. Suspicious. 🕵️‍♀️",
+        "focus": "32%",
+        "label": "Exhibit C"
+      },
+      {
+        "src": "img/wall/2.jpg",
+        "caption": "Dinner date, certified ☕",
+        "quote": "Rare footage of both of us behaving like normal people. Screenshot it, it won't happen again. 📸",
+        "focus": "38%",
+        "label": "Exhibit D"
+      },
+      {
+        "src": "img/wall/9.jpg",
+        "caption": "Spoon ready. Attack mode ON 🥄",
+        "quote": "Caught mid-strategy: \"how do I finish this without sharing any?\" The spoon was the weapon. 🥄😤",
+        "focus": "28%",
+        "label": "Exhibit F"
+      },
+      {
+        "src": "img/wall/3.jpg",
+        "caption": "3 seconds later... 😛",
+        "quote": "Me: \"let's take a decent photo.\" Also me: 😛  You, as usual, being the only mature one here. 🙄",
+        "focus": "38%",
+        "label": "Exhibit E"
+      },
+      {
+        "src": "img/wall/10.jpg",
+        "caption": "Do not disturb. She's eating 🤫",
+        "quote": "Eyes closed. Full focus. Chai AND a sandwich. This is a sacred moment, please do not interrupt. 🥪🙏",
+        "focus": "28%",
+        "label": "Exhibit G"
+      },
+      {
+        "src": "img/wall/11.jpg",
+        "caption": "Fries > everything 🍟",
+        "quote": "Guarding the fries like a national treasure. Asking for even one = very risky move. 🍟🛡️",
+        "focus": "30%",
+        "label": "Exhibit H"
+      },
+      {
+        "src": "img/wall/4.jpg",
+        "caption": "Main character energy 💅",
+        "quote": "Heart filter ✅ Glasses ✅ Tongue out ✅ Looking like you're about to judge my entire life ✅ 😂",
+        "focus": "38%",
+        "label": "Exhibit I"
+      },
+      {
+        "src": "img/wall/12.jpg",
+        "caption": "Ice cream + phone = multitasking queen 🍦",
+        "quote": "Replying to texts AND finishing the ice cream before it melts. Pro level. Nobody else can do this. 🍦📱",
+        "focus": "40%",
+        "label": "Exhibit J"
+      },
+      {
+        "src": "img/wall/5.jpg",
+        "caption": "Black & white, still hearts 🤍",
+        "quote": "Filter: dramatic. Mood: \"I need this filter coffee more than I need anyone.\" Honestly, relatable. ☕🖤",
+        "focus": "40%",
+        "label": "Exhibit K"
+      },
+      {
+        "src": "img/wall/8.jpg",
+        "caption": "This smile. That's the caption 😊",
+        "quote": "Out of all the silly ones, this is the one I'd frame. Don't let it go to your head. 😌💖",
+        "focus": "40%",
+        "label": "Exhibit L"
+      }
+    ]
+  },
+  "teaserExtraButtons": [
+    "Just one more try... 👀",
+    "I'm not giving up 😤",
+    "Okay okay, I surrender 🏳️"
+  ]
 }

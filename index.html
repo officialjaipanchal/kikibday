@@ -9,10 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&family=Caveat:wght@600;700&display=swap"
     rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/style.css?v=20260923062602">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
@@ -27,17 +27,23 @@
     <!-- Floating Interactive Background Items -->
     <div id="floating-collectibles" class="floating-collectibles"></div>
 
+    <!-- Night sky -->
+    <div class="night-sky" id="night-sky">
+      <div class="moon"></div>
+      <span class="shooting-star s1"></span>
+      <span class="shooting-star s2"></span>
+    </div>
+
     <div class="countdown-card">
-      <!-- Cooking Visual Hero Badge -->
-      <div class="cooking-hero-wrapper">
-        <div class="cooking-img-box">
-          <img src="img/cooking_magic.png" alt="Something Special Cooking" class="cooking-img">
-          <div class="cooking-shine-overlay"></div>
-        </div>
-        <div class="cooking-tag">
-          <span class="live-pulse"></span>
-          <span>Baking Surprise Magic...</span>
-        </div>
+      <div class="cd-live-pill">
+        <span class="live-pulse"></span>
+        <span>Surprise in the oven</span>
+      </div>
+
+      <div class="cd-avatar">
+        <div class="cd-avatar-ring"></div>
+        <img src="img/countdown.jpg" alt="Kiki">
+        <span class="cd-avatar-badge">🎂</span>
       </div>
 
       <h1 class="countdown-title">Something Special is Cooking...</h1>
@@ -48,27 +54,41 @@
           <span id="days" class="timer-num">00</span>
           <span class="timer-label">Days</span>
         </div>
+        <span class="timer-colon">:</span>
         <div class="timer-box">
           <span id="hours" class="timer-num">00</span>
           <span class="timer-label">Hours</span>
         </div>
+        <span class="timer-colon">:</span>
         <div class="timer-box">
           <span id="minutes" class="timer-num">00</span>
-          <span class="timer-label">Minutes</span>
+          <span class="timer-label">Mins</span>
         </div>
+        <span class="timer-colon">:</span>
         <div class="timer-box">
           <span id="seconds" class="timer-num">00</span>
-          <span class="timer-label">Seconds</span>
+          <span class="timer-label">Secs</span>
+        </div>
+      </div>
+
+      <div class="bday-progress">
+        <div class="bday-progress-head">
+          <span>Birthday loading…</span>
+          <span id="bday-progress-pct">0%</span>
+        </div>
+        <div class="bday-progress-track">
+          <div class="bday-progress-fill" id="bday-progress-fill"></div>
         </div>
       </div>
 
       <div class="good-things-box">
-        <p id="good-thing-text" class="good-thing">✨ "The universe is preparing a magical day for you!"</p>
+        <span class="chat-from">Jerry 💬</span>
+        <p id="good-thing-text" class="good-thing">🤫 If you're reading this, you're too early. Classic Kiki.</p>
       </div>
 
       <button id="preview-btn" class="preview-btn">
         <span class="btn-shine"></span>
-        <span class="btn-text">✨ Sneak Peek Mystery Vault</span>
+        <span class="btn-text">🔒 Sneak Peek Mystery Vault</span>
       </button>
     </div>
   </div>
@@ -85,14 +105,51 @@
       <div id="scratch-card-wrapper" class="scratch-card-wrapper hidden">
         <p class="scratch-instruction">✨ Scratch below to reveal a secret hint!</p>
         <div class="scratch-card-box">
-          <div id="scratch-secret-text" class="scratch-secret-text">😜 Hint: 100% chance of cheesy birthday wishes,
-            floating balloons & maximum silly drama!</div>
+          <div id="scratch-secret-text" class="scratch-secret-text">🔍 Hint: there's evidence. A LOT of evidence. Mostly of you eating. 📸🍕</div>
           <canvas id="scratch-canvas" width="280" height="80"></canvas>
         </div>
       </div>
 
       <div class="kiki-modal-footer">
         <button id="close-kiki-modal" class="kiki-btn">Okay fine! 🙈</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Music Player Widget -->
+  <div id="music-player-widget" class="music-player-widget is-hidden">
+    <button id="music-btn" class="music-btn" title="Toggle Music">
+      <span class="music-icon">🎵</span>
+      <span id="music-text">Play Music</span>
+    </button>
+    <audio id="bday-audio" loop src="music/happy-birthday.mp3"></audio>
+  </div>
+
+  <!-- Interactive Love Letter Modal -->
+  <!-- Photo Wall ("Evidence Wall") -->
+  <div id="photo-wall" class="photo-wall" aria-hidden="true">
+    <div class="wall-lights" id="wall-lights"></div>
+    <div class="wall-inner">
+      <h2 class="wall-title" id="wall-title">The Evidence Wall 🕵️‍♀️📸</h2>
+      <p class="wall-sub" id="wall-sub">Exhibits of pure silliness. Tap a photo to flip it 👆</p>
+      <div id="wall-grid" class="wall-grid"></div>
+      <button id="wall-close-btn" class="wall-btn">Continue the surprise ✨</button>
+    </div>
+  </div>
+
+  <div id="love-letter-modal" class="love-letter-modal hidden">
+    <div class="love-letter-content">
+      <button id="close-letter-modal-x" class="modal-close-icon" aria-label="Close">&times;</button>
+      <div class="wax-seal">💌</div>
+      <h2 id="love-letter-title">A Secret Birthday Note For You 💌✨</h2>
+      <div id="love-letter-body" class="love-letter-body">
+        Dearest Kiki,<br><br>
+        I just wanted to take a moment to tell you how truly wonderful you are. Your laugh brightens up the darkest days, your kindness inspires everyone around you, and your sweet smile is honestly my favorite thing in the world.<br><br>
+        Thank you for being your amazing self. I hope this new year brings you all the happiness, success, laughter, and love you deserve!<br><br>
+        Happy Birthday, beautiful! ❤️✨
+      </div>
+      <div class="letter-footer">
+        <button id="close-letter-btn" class="kiki-btn">Close Note 🥰</button>
       </div>
     </div>
   </div>
@@ -142,43 +199,12 @@
           unforgettable memories, and endless reasons to smile.
           Happy Birthday! ❤️✨
         </h5>
+
       </div>
     </div>
     <div class="seven">
       <div class="baloons">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon2.svg" alt="">
-        <img src="img/ballon1.svg" alt="">
-        <img src="img/ballon3.svg" alt="">
+        <!-- Balloons are generated in script/main.js -->
       </div>
     </div>
     <div class="eight">
@@ -212,16 +238,27 @@
     </div>
     <div class="nine">
       <p data-node-name="outroText">Okay, now come back and tell me if you liked it.</p>
+      
       <p id="replay" data-node-name="replayText">Or click, if you want to watch it again.</p>
+
       <p class="last-smile" data-node-name="outroSmiley">:)</p>
 
+      <!-- Clean End Image Frame at the Very End -->
+      <div class="end-image-wrapper">
+        <img src="img/Bday K.png" alt="Birthday Celebration" class="weegen2-dp" data-node-name="image2Path">
+      </div>
 
-      <img src="img/Bday K.png" alt="" class="weegen2-dp" data-node-name="image2Path">
+      <!-- Final Actions: shown last, after the end photo -->
+      <div class="end-actions">
+        <button id="hug-btn" class="hug-action-btn">🤗 Send Virtual Hugs &amp; Kisses 💋</button>
+        <button id="open-letter-btn" class="letter-trigger-btn">💌 Tap to Read My Secret Birthday Note</button>
+        <button id="open-wall-btn" class="wall-trigger-btn">📸 Our Evidence Wall</button>
+      </div>
     </div>
   </div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-<script type="application/javascript" src="script/main.js"></script>
+<script type="application/javascript" src="script/main.js?v=20260923062602"></script>
 
 </html>
