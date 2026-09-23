@@ -2136,3 +2136,43 @@ body {
 .music-player-widget.is-hidden {
   display: none;
 }
+
+/* Typewriter title on the countdown */
+.countdown-container .countdown-title {
+  min-height: 2.35em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.type-caret {
+  display: inline-block;
+  width: 3px;
+  height: 0.95em;
+  margin-left: 4px;
+  border-radius: 2px;
+  background: #ff80ab;
+  box-shadow: 0 0 8px rgba(255, 128, 171, 0.8);
+  animation: caretBlink 0.9s steps(2, start) infinite;
+  vertical-align: middle;
+}
+
+@keyframes caretBlink {
+  to { visibility: hidden; }
+}
+
+/* Title: solid glowing text so emojis keep their colours; caret stays inline */
+.countdown-container .countdown-title {
+  display: block;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  text-shadow: 0 0 18px rgba(255, 128, 171, 0.65), 0 2px 10px rgba(124, 77, 255, 0.4);
+}
+
+.countdown-container .countdown-title .type-caret {
+  vertical-align: -0.1em;
+}

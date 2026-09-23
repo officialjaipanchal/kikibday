@@ -482,6 +482,69 @@ const initCountdown = (targetDateStr, customConfig = {}) => {
     }
   }, 4500);
 
+  // Typewriter title that changes as midnight gets closer
+  const titleTextEl = document.getElementById("countdown-title-text");
+  const pickList = (key, fallback) =>
+    Array.isArray(customConfig[key]) && customConfig[key].length
+      ? customConfig[key]
+      : fallback;
+  const titleSets = {
+    normal: pickList("countdownTitles", ["Something Special is Cooking... 🍳", "Shh... Birthday Loading 🤫", "The Surprise is in the Oven 🔥", "Patience, Birthday Girl 🎂", "Kiki's Big Day is Almost Here ✨", "Midnight Can't Come Soon Enough 🌙"]),
+    hour: pickList("countdownTitlesLastHour", ["Less Than an Hour, Kiki! ⏰", "Almost Midnight... 🌙", "Get Your Smile Ready 😁"]),
+    minute: pickList("countdownTitlesLastMinute", ["Get Ready, Kiki... 🎉", "Here It Comes! 🥳"]),
+  };
+  const currentTitleSet = () => {
+    const left = targetDate.getTime() - Date.now();
+    if (left <= 60 * 1000) return titleSets.minute;
+    if (left <= 60 * 60 * 1000) return titleSets.hour;
+    return titleSets.normal;
+  };
+  const graphemes = (text) =>
+    typeof Intl !== "undefined" && Intl.Segmenter
+      ? Array.from(new Intl.Segmenter(undefined, { granularity: "grapheme" }).segment(text), (x) => x.segment)
+      : Array.from(text);
+
+  if (titleTextEl) {
+    let titleIdx = 0;
+    let lastSet = null;
+    const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+    const typeTitle = async () => {
+      while (document.body.contains(titleTextEl)) {
+        const set = currentTitleSet();
+        if (set !== lastSet) {
+          lastSet = set;
+          titleIdx = 0;
+        }
+        const chars = graphemes(set[titleIdx % set.length]);
+        // type in
+        for (let i = 1; i <= chars.length; i++) {
+          titleTextEl.textContent = chars.slice(0, i).join("");
+          await wait(55 + Math.random() * 45);
+        }
+        await wait(3200);
+        // delete
+        for (let i = chars.length - 1; i >= 0; i--) {
+          titleTextEl.textContent = chars.slice(0, i).join("");
+          await wait(28);
+        }
+        await wait(350);
+        titleIdx++;
+      }
+    };
+    // Show the first title fully, then start rotating
+    titleTextEl.textContent = titleSets.normal[0];
+    setTimeout(async () => {
+      const chars = graphemes(titleTextEl.textContent);
+      for (let i = chars.length - 1; i >= 0; i--) {
+        titleTextEl.textContent = chars.slice(0, i).join("");
+        await wait(28);
+      }
+      titleIdx = currentTitleSet() === titleSets.normal ? 1 : 0;
+      lastSet = currentTitleSet();
+      typeTitle();
+    }, 3500);
+  }
+
   // Countdown Timer Loop
   const updateTimer = () => {
     const now = new Date().getTime();
