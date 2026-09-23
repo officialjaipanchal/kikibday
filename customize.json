@@ -92,7 +92,7 @@
     "photos": [
       {
         "src": "img/wall/1.jpg",
-        "caption": "Minion squad, reporting for duty 🍌",
+        "caption": "Minion squad, reporting for duty 💛",
         "quote": "We walked in as humans and walked out as minions. Matching tees, zero shame. Bello! 🍌💛",
         "focus": "38%",
         "label": "Exhibit A"
@@ -119,18 +119,18 @@
         "label": "Exhibit D"
       },
       {
-        "src": "img/wall/9.jpg",
-        "caption": "Spoon ready. Attack mode ON 🥄",
-        "quote": "Caught mid-strategy: \"how do I finish this without sharing any?\" The spoon was the weapon. 🥄😤",
-        "focus": "28%",
-        "label": "Exhibit F"
-      },
-      {
         "src": "img/wall/3.jpg",
         "caption": "3 seconds later... 😛",
         "quote": "Me: \"let's take a decent photo.\" Also me: 😛  You, as usual, being the only mature one here. 🙄",
         "focus": "38%",
         "label": "Exhibit E"
+      },
+      {
+        "src": "img/wall/9.jpg",
+        "caption": "Spoon ready. Attack mode ON 🥄",
+        "quote": "Caught mid-strategy: \"how do I finish this without sharing any?\" The spoon was the weapon. 🥄😤",
+        "focus": "28%",
+        "label": "Exhibit F"
       },
       {
         "src": "img/wall/10.jpg",
@@ -162,7 +162,7 @@
       },
       {
         "src": "img/wall/5.jpg",
-        "caption": "Black & white, still hearts 🤍",
+        "caption": "Black & white, Steal hearts 🤍",
         "quote": "Filter: dramatic. Mood: \"I need this filter coffee more than I need anyone.\" Honestly, relatable. ☕🖤",
         "focus": "40%",
         "label": "Exhibit K"

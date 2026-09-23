@@ -489,9 +489,23 @@ const initCountdown = (targetDateStr, customConfig = {}) => {
       ? customConfig[key]
       : fallback;
   const titleSets = {
-    normal: pickList("countdownTitles", ["Something Special is Cooking... ", "Shh... Birthday Loading 🤫", "The Surprise is in the Oven 🔥", "Patience, Birthday Girl 🎂", "Kiki's Big Day is Almost Here ✨", "Midnight Can't Come Soon Enough 🌙"]),
-    hour: pickList("countdownTitlesLastHour", ["Less Than an Hour, Kiki! ⏰", "Almost Midnight... 🌙", "Get Your Smile Ready 😁"]),
-    minute: pickList("countdownTitlesLastMinute", ["Get Ready, Kiki... 🎉", "Here It Comes! 🥳"]),
+    normal: pickList("countdownTitles", [
+      "Something Special is Cooking... ",
+      "Shh... Birthday Loading 🤫",
+      "The Surprise is in the Oven 🔥",
+      "Patience, Birthday Girl 🎂",
+      "Kiki's Big Day is Almost Here ✨",
+      "Midnight Can't Come Soon Enough 🌙",
+    ]),
+    hour: pickList("countdownTitlesLastHour", [
+      "Less Than an Hour, Kiki! ⏰",
+      "Almost Midnight... 🌙",
+      "Get Your Smile Ready 😁",
+    ]),
+    minute: pickList("countdownTitlesLastMinute", [
+      "Get Ready, Kiki... 🎉",
+      "Here It Comes! 🥳",
+    ]),
   };
   const currentTitleSet = () => {
     const left = targetDate.getTime() - Date.now();
@@ -501,7 +515,12 @@ const initCountdown = (targetDateStr, customConfig = {}) => {
   };
   const graphemes = (text) =>
     typeof Intl !== "undefined" && Intl.Segmenter
-      ? Array.from(new Intl.Segmenter(undefined, { granularity: "grapheme" }).segment(text), (x) => x.segment)
+      ? Array.from(
+          new Intl.Segmenter(undefined, { granularity: "grapheme" }).segment(
+            text,
+          ),
+          (x) => x.segment,
+        )
       : Array.from(text);
 
   if (titleTextEl) {
@@ -654,10 +673,17 @@ const initCountdown = (targetDateStr, customConfig = {}) => {
           Array.isArray(customConfig.teaserExtraButtons) &&
           customConfig.teaserExtraButtons.length
             ? customConfig.teaserExtraButtons
-            : ["Just one more try... 👀", "I'm not giving up 😤", "Okay okay, I surrender 🏳️"];
+            : [
+                "Just one more try... 👀",
+                "I'm not giving up 😤",
+                "Okay okay, I surrender 🏳️",
+              ];
         closeBtnEl.innerText =
           previewAttempts > teaserResponses.length
-            ? extraBtns[(previewAttempts - teaserResponses.length - 1) % extraBtns.length]
+            ? extraBtns[
+                (previewAttempts - teaserResponses.length - 1) %
+                  extraBtns.length
+              ]
             : currentTeaser.button || "Okay fine! 🙈";
       }
 
@@ -816,7 +842,7 @@ const defaultData = {
       },
       {
         src: "img/wall/5.jpg",
-        caption: "Black & white, still hearts 🤍",
+        caption: "Black & white, Steal hearts 🤍",
         quote:
           'Filter: dramatic. Mood: "I need this filter coffee more than I need anyone." Honestly, relatable. ☕🖤',
         focus: "40%",
