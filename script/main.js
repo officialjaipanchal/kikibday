@@ -489,7 +489,7 @@ const initCountdown = (targetDateStr, customConfig = {}) => {
       ? customConfig[key]
       : fallback;
   const titleSets = {
-    normal: pickList("countdownTitles", ["Something Special is Cooking... 🍳", "Shh... Birthday Loading 🤫", "The Surprise is in the Oven 🔥", "Patience, Birthday Girl 🎂", "Kiki's Big Day is Almost Here ✨", "Midnight Can't Come Soon Enough 🌙"]),
+    normal: pickList("countdownTitles", ["Something Special is Cooking... ", "Shh... Birthday Loading 🤫", "The Surprise is in the Oven 🔥", "Patience, Birthday Girl 🎂", "Kiki's Big Day is Almost Here ✨", "Midnight Can't Come Soon Enough 🌙"]),
     hour: pickList("countdownTitlesLastHour", ["Less Than an Hour, Kiki! ⏰", "Almost Midnight... 🌙", "Get Your Smile Ready 😁"]),
     minute: pickList("countdownTitlesLastMinute", ["Get Ready, Kiki... 🎉", "Here It Comes! 🥳"]),
   };
