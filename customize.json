@@ -21,5 +21,33 @@
   "outroText": "Okay, now come back and tell me if you liked it.",
   "replayText": "Or click, if you want to watch it again.",
   "outroSmiley": "😊",
-  "targetDate": "2026-09-25T00:00:00"
+  "targetDate": "2026-09-25T00:00:00",
+  "teaserResponses": [
+    {
+      "emoji": "🔐✨",
+      "title": "Nice Try, Krishna!",
+      "message": "The Birthday Vault is locked with 256-bit celebration encryption. You'll have to wait till midnight! 🤫"
+    },
+    {
+      "emoji": "🕵️‍♀️🎁",
+      "title": "Caught Red-Handed!",
+      "message": "Attempt #2 detected! 99% of secrets are still top secret... but your curiosity score is 100/100! 📈"
+    },
+    {
+      "emoji": "✨💖",
+      "title": "Patience, Birthday Queen!",
+      "message": "Great things take time. Here is an exclusive mini hint: Scratch the card below to reveal a silly clue! 👇"
+    },
+    {
+      "emoji": "🎉🎂",
+      "title": "You REALLY want a sneak peek?",
+      "message": "Okay okay! 1 real hint: Legend says someone spent way too much time making this just to make you smile! 🤭✨"
+    },
+    {
+      "emoji": "🥳🎈",
+      "title": "Curiosity Overload!",
+      "message": "You've unlocked maximum sneak-peek attempts! Tap the floating gifts & balloons on screen to burst confetti! 🎈✨"
+    }
+  ],
+  "scratchCardHint": "😜 Hint: 100% chance of cheesy birthday wishes, floating balloons & maximum silly drama!"
 }

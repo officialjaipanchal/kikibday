@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Happy Birthday!!! :)</title>
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400" rel="stylesheet">
+  <title>Happy Birthday Krishna! ✨🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
   <link rel="stylesheet" href="style/style.css">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -15,11 +19,30 @@
 <body>
   <!-- Countdown Screen until 25 Sept 12:00 AM -->
   <div id="countdown-screen" class="countdown-container">
+    <!-- Ambient Glowing Orbs Background -->
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+
+    <!-- Floating Interactive Background Items -->
+    <div id="floating-collectibles" class="floating-collectibles"></div>
+
     <div class="countdown-card">
-      <div class="sparkles">✨ 🎈 🎁</div>
+      <!-- Cooking Visual Hero Badge -->
+      <div class="cooking-hero-wrapper">
+        <div class="cooking-img-box">
+          <img src="img/cooking_magic.png" alt="Something Special Cooking" class="cooking-img">
+          <div class="cooking-shine-overlay"></div>
+        </div>
+        <div class="cooking-tag">
+          <span class="live-pulse"></span>
+          <span>Baking Surprise Magic...</span>
+        </div>
+      </div>
+
       <h1 class="countdown-title">Something Special is Cooking...</h1>
-      <p class="countdown-subtitle">Counting down to Krishna's Birthday! 🎂</p>
-      
+      <p class="countdown-subtitle">Counting down to Kiki's Birthday! 🎂✨</p>
+
       <div class="timer-grid">
         <div class="timer-box">
           <span id="days" class="timer-num">00</span>
@@ -43,17 +66,34 @@
         <p id="good-thing-text" class="good-thing">✨ "The universe is preparing a magical day for you!"</p>
       </div>
 
-      <button id="preview-btn" class="preview-btn">✨ Click to Preview Surprise</button>
+      <button id="preview-btn" class="preview-btn">
+        <span class="btn-shine"></span>
+        <span class="btn-text">✨ Sneak Peek Mystery Vault</span>
+      </button>
     </div>
   </div>
 
-  <!-- Teasing Modal when Preview is clicked -->
+  <!-- Dynamic Teasing / Mystery Vault Modal when Preview is clicked -->
   <div id="kiki-modal" class="kiki-modal hidden">
     <div class="kiki-modal-content">
-      <div class="kiki-emoji">😜🎁✨</div>
-      <h2>Nice Try!</h2>
-      <p>Kikiiiii, wait till the day comes! 🤫🎂</p>
-      <button id="close-kiki-modal" class="kiki-btn">Okay fine! 🙈</button>
+      <button id="modal-close-x" class="modal-close-icon" aria-label="Close">&times;</button>
+      <div id="kiki-emoji" class="kiki-emoji">😜🎁✨</div>
+      <h2 id="kiki-modal-title">Nice Try!</h2>
+      <p id="kiki-modal-desc">Kikiiiii, wait till the day comes! 🤫🎂</p>
+
+      <!-- Interactive Scratch-Off Card -->
+      <div id="scratch-card-wrapper" class="scratch-card-wrapper hidden">
+        <p class="scratch-instruction">✨ Scratch below to reveal a secret hint!</p>
+        <div class="scratch-card-box">
+          <div id="scratch-secret-text" class="scratch-secret-text">😜 Hint: 100% chance of cheesy birthday wishes,
+            floating balloons & maximum silly drama!</div>
+          <canvas id="scratch-canvas" width="280" height="80"></canvas>
+        </div>
+      </div>
+
+      <div class="kiki-modal-footer">
+        <button id="close-kiki-modal" class="kiki-btn">Okay fine! 🙈</button>
+      </div>
     </div>
   </div>
 
@@ -79,7 +119,8 @@
       <p class="idea-2" data-node-name="text3">But then I stopped.</p>
       <p class="idea-3">
         <span data-node-name="text4">I realised, I wanted to do something</span>
-        <strong data-node-name="text4Adjective">special</strong>.</p>
+        <strong data-node-name="text4Adjective">special</strong>.
+      </p>
       <p class="idea-4" data-node-name="text5Entry">Because,</p>
       <p class="idea-5">
         <span data-node-name="text5Content">You are Special</span>
@@ -173,8 +214,8 @@
       <p data-node-name="outroText">Okay, now come back and tell me if you liked it.</p>
       <p id="replay" data-node-name="replayText">Or click, if you want to watch it again.</p>
       <p class="last-smile" data-node-name="outroSmiley">:)</p>
-      
-      
+
+
       <img src="img/Bday K.png" alt="" class="weegen2-dp" data-node-name="image2Path">
     </div>
   </div>
